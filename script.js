@@ -1,4 +1,7 @@
-
+/**
+ * Represents the position and direction of the rover.
+ * @type {{x: number, y: number, direction: string}}
+ */
 
 let roverPosition = {
     x: 4,
@@ -10,7 +13,11 @@ let roverPosition = {
 // F B L R
 
 
-console.log(roverPosition);
+console.log(roverPosition); // Logging the initial moves 
+
+/**
+ * Moves the rover one unit forward in the direction it's currently facing.
+ */
 
 function moveForward() {
     switch (roverPosition.direction) {
@@ -28,10 +35,15 @@ function moveForward() {
             break;
         default:
             // alert('Invalid Direction')
+            // No default action is documented since it's an alert for invalid direction which is not typical for server-side or node environments
+
             break;
     }
 }
 
+/**
+ * Moves the rover one unit backward opposite to the direction it's currently facing.
+ */
 
 function moveBackward() {
     switch (roverPosition.direction) {
@@ -52,6 +64,11 @@ function moveBackward() {
             break;
     }
 }
+
+
+/**
+ * Rotates the rover 90 degrees to the left without changing its position.
+ */
 
 function rotateLeft() {
     switch (roverPosition.direction) {
@@ -74,6 +91,10 @@ function rotateLeft() {
 }
 
 
+/**
+ * Rotates the rover 90 degrees to the right without changing its position.
+ */
+
 function rotateRight() {
     switch (roverPosition.direction) {
         case 'NORTH':
@@ -93,6 +114,11 @@ function rotateRight() {
     }
 }
 
+
+/**
+ * Executes a sequence of commands for the rover movement and rotation.
+ * @param {string} commands - A string consisting of 'F', 'B', 'L', 'R' representing Forward, Backward, Left, and Right respectively.
+ */
 
 function executeCommands(commands) {
     for (let i = 0; i < commands.length; i++) {
@@ -117,6 +143,12 @@ function executeCommands(commands) {
 }
 
 // [[1,4], [3,5], [7,4]]
+
+
+
+/**
+ * Validates the user-input commands and processes them if valid. Alerts if invalid commands are present or if the rover encounters an obstacle.
+ */
 
 
 let userInput = window.prompt('Enter the coordinates for the robot')
