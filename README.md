@@ -22,10 +22,10 @@ The project is structured around several key functions:
 * validateMoves(): Before executing commands, this function checks their validity and ensures the Rover does not move onto an obstacle.
 
 ## Setup and Usage
-1- Clone the repository to your local machine.
-2- Open the project in your preferred code editor.
-3- Load the index.html file in a web browser to start the simulation.
-4- Use the prompt to enter command sequences for the Rover (e.g., 'FFRBLB')
+* Clone the repository to your local machine.
+* Open the project in your preferred code editor.
+* Load the index.html file in a web browser to start the simulation.
+* Use the prompt to enter command sequences for the Rover (e.g., 'FFRBLB')
 
 
 ## Principles and Practices
